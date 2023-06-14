@@ -1,0 +1,23 @@
+{
+  "name": "adminshop",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "pnpm --filter {packages/build} start",
+    "build": "pnpm --filter {packages/build} build"
+  },
+  "devDependencies": {
+    "@adminshop/theme": "workspace:*",
+    "@adminshop/drag-into-iframe": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linojobs/adminshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linojobs/adminshop/issues"
+  },
+  "homepage": "https://github.com/linojobs/adminshop#readme"
+}
