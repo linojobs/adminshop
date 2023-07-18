@@ -1,0 +1,18 @@
+{
+  "name": "@types/adminshop",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "typeScriptVersion": "4.3",
+  "exports":{
+    ".": {
+      "types": {
+          "default": "./index.d.ts"
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.12"
+  }
+}

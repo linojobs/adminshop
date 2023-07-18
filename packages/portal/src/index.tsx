@@ -1,13 +1,25 @@
-import React from "react";
-import {createRoot} from "react-dom/client";
-import SignIn from "./components/sign-in";
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import {DNDBridge} from '@adminshop/bridge';
+import WorkBench from './components/workbench';
 
-import "@adminshop/theme/index.css";
+import '@adminshop/theme/index.css';
+import { DNDProvider } from '@adminshop/dnd';
+import { StoreProvider } from '@adminshop/store';
 
-const rootContianer = document.createElement("div");
-rootContianer.classList.add("app-container");
+const rootContianer = document.createElement('div');
+rootContianer.classList.add('adminshop');
 
 const root = createRoot(rootContianer);
-root.render(<SignIn />);
+root.render(
+    <StoreProvider>
+        <DNDProvider>
+            <>
+                <WorkBench />
+                <DNDBridge />
+            </>
+        </DNDProvider>
+    </StoreProvider>
+);
 
 document.body.appendChild(rootContianer);

@@ -1,0 +1,12 @@
+.margin{
+    margin-bottom: 8px;
+}
+
+.mask{
+    outline: 1px solid blue;
+    position: relative;
+}
+
+.selected{
+    outline: 2px solid rgb(60, 60, 196);
+}

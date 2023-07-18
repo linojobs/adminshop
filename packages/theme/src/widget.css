@@ -1,0 +1,10 @@
+.widgets{
+   background-color: #fff;
+}
+
+.widget{
+  padding: 8px;
+  &:hover{
+    background-color: aliceblue;
+  }
+}

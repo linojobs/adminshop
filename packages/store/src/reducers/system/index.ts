@@ -1,7 +1,7 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
 const system = createSlice({
-    name:"system",
+    name:'system',
     initialState:{
         value:0
     },

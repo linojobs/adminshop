@@ -1,0 +1,1 @@
+import '@adminshop/theme/renderer.css';

@@ -1,0 +1,1 @@
+export {Table,Card,Button} from 'antd';

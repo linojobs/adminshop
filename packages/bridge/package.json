@@ -1,0 +1,22 @@
+{
+  "name": "@adminshop/bridge",
+  "version": "1.0.0",
+  "description": "",
+  "publishConfig": {
+    "directory": "src",
+    "linkDirectory": true
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  }
+}
