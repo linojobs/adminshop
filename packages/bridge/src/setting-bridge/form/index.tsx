@@ -1,7 +1,7 @@
 import React,{useCallback} from 'react';
 import {Form,Input, Switch} from 'antd';
 
-const CardSetting:React.FC<ISetting> = ({onSave,props}) => {
+const FormSetting:React.FC<ISetting> = ({onSave,props}) => {
 
     const handleInput = useCallback((name:string)=>{
         return (e:React.ChangeEvent<HTMLInputElement>) => {
@@ -33,4 +33,4 @@ const CardSetting:React.FC<ISetting> = ({onSave,props}) => {
     );
 };
 
-export default CardSetting;
+export default FormSetting;

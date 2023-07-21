@@ -13,8 +13,9 @@ const DNDBridge:React.FC = () => {
     const dragend = useCallback((dnd)=>{
         if(dnd.eventType !== 'dragend')return;
         const id = `${uuid}`;
+        const node = Object.assign({},dnd.node,{id});
         editor.setToNodeId('');
-        create({id,node:dnd.node});
+        create({id,node});
         add({
             fromId:id,
             toId:dnd.toNodeId

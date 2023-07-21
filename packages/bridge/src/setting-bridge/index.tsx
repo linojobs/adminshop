@@ -1,14 +1,21 @@
 import React from 'react';
 import TableSetting from './table';
+import CardSetting from './card';
+import FormSetting from './form';
+import InputSetting from './input';
 
-const SettingBridge:React.FC<INode> = ({tag,props}) => {
-    switch(tag){
+const SettingBridge:React.FC<ISettingBridge> = ({onSave,node}) => {
+    switch(node.tag){
     case 'table':
-        return <TableSetting {...props} />;
+        return <TableSetting onSave={onSave} props={node.props} />;
     case 'card':
-        return <>Card</>;
+        return <CardSetting onSave={onSave} props={node.props} />;
     case 'button':
-        return <>Button</>;       
+        return <>Button</>;
+    case 'form':
+        return <FormSetting onSave={onSave} props={node.props} />;
+    case 'input':
+        return <InputSetting onSave={onSave} props={node.props} />;         
     }
     return <></>;
 };

@@ -7,7 +7,7 @@
        'menu left body body body body right'
        'footer footer footer footer footer footer footer';
     grid-template-rows: 45px auto 30px;
-    grid-template-columns: 45px 200px auto;
+    grid-template-columns: 45px 200px auto auto auto auto 300px;
     background-color: #2196F3;
 }
 
@@ -36,7 +36,7 @@
 
 .workbench-right{
     grid-area: right;
-    background-color: #eee;
+    background-color: #fff;
     border-left: 1px solid #ddd;
 }
 
@@ -52,4 +52,8 @@
     color:#ffffff;
     text-align: center;
     padding: 5px;
+}
+
+[data-role='dnd-iframe']{
+    border:none;
 }

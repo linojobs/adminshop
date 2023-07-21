@@ -24,13 +24,13 @@ const nodes = createSlice({
             delete state.nodes[payload.id];
             delete state.relations[payload.id];
         },
-        save(state,action:PayloadAction<INode>){
+        saveProps(state,action:PayloadAction<{id:string,props:INode['props']}>){
             const {payload} = action;
-            state.nodes[payload.id] = payload;
+            state.nodes[payload.id].props = payload.props;
         }
     }
 });
 
-export const {create,add,remove,save} = nodes.actions;
+export const {create,add,remove,saveProps} = nodes.actions;
 
 export default nodes;

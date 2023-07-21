@@ -2,7 +2,7 @@ interface IReactNodeWraper{
     children:React.ReactElement;
 }
 
-type IComponentTag = 'table'|'card'|'page'|'button';
+type IComponentTag = 'table'|'card'|'page'|'button'|'form'|'input'|'select'|'checkbox'|'radio';
 
 type INestData = Record<string,string|number|INestData>;
 
@@ -98,4 +98,14 @@ interface IDragNodeWraper{
     toNodeId:string;
     overNodeId:string;
     selectNodeId:string;
+ }
+
+ interface ISettingBridge{
+   node:INode;
+   onSave:(node:INode)=>void;
+ }
+
+ interface ISetting{
+   props:INode["props"];
+   onSave:(node:INode)=>void;
  }

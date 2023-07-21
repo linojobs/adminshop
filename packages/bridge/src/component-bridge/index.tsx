@@ -1,11 +1,12 @@
 import React,{useCallback} from 'react';
 import cn from 'classnames';
-import { Button, Card, Table } from '@adminshop/components';
+import { Button, Card, Form, Input, Table } from '@adminshop/components';
 
 const ComponentBridge:React.FC<IComponentBrige> = ({id,tag,children,dropable,mask,props,selected}) => {
 
-    const handleRef = useCallback((ref:HTMLDivElement)=>{
+    const handleRef = useCallback((ref:HTMLDivElement|HTMLFormElement)=>{
         if(!ref)return;
+        console.log(ref);
         ref.dataset.dndId = id;
         ref.dataset.dropable = dropable === true ? 'true' : 'false';
     },[id]);
@@ -23,7 +24,11 @@ const ComponentBridge:React.FC<IComponentBrige> = ({id,tag,children,dropable,mas
     case 'table':
         return <Table className={classes} ref={handleRef} {...props} />;
     case 'card':
-        return <Card className={classes} ref={handleRef} {...props}>{children}</Card>;  
+        return <Card className={classes} ref={handleRef} {...props}>{children}</Card>;
+    case 'form':
+        return <Form className={classes} ref={handleRef} {...props}>{children}</Form>;
+    case 'input':
+        return <Input className={classes} ref={handleRef} {...props} />;      
     }
     return <></>;
 };

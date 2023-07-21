@@ -1,5 +1,6 @@
 .margin{
     margin-bottom: 8px;
+    min-height: 50px;
 }
 
 .mask{

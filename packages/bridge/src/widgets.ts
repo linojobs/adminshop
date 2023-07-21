@@ -3,7 +3,6 @@ const widgets:IWidget[] = [
         tag:'page',
         dropable:true,
         title:'Page 模版页',
-        template:`<card><table /><table /><button /></card>`,
         props:{}
     },
     {
@@ -11,7 +10,8 @@ const widgets:IWidget[] = [
         dropable:true,
         title:'Card 卡片',
         props:{
-            title:'Card'
+            title:'Card',
+            bordered:true
         }
     },
     {
@@ -31,6 +31,34 @@ const widgets:IWidget[] = [
         title:'Button 按钮',
         props:{
             title:'Button'
+        }
+    },
+    {
+        tag:'form',
+        dropable:true,
+        title:'Form 表单',
+        props:{
+            layout:'horizontal'
+        }
+    },
+    {
+        tag:'input',
+        dropable:false,
+        title:'Input 文本输入框',
+        props:{
+            type:'text',
+            label:'Name',
+            name:'name'
+        }
+    },
+    {
+        tag:'input',
+        dropable:false,
+        title:'Password 密码输入框',
+        props:{
+            type:'password',
+            label:'Password',
+            name:'password'
         }
     }
 ];

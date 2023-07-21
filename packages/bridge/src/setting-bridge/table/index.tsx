@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableSetting:React.FC = () => {
+const TableSetting:React.FC<ISetting> = () => {
     return (
         <></>
     );

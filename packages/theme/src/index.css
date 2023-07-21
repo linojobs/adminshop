@@ -1,11 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./workbench.css";
+@import "./widget.css";
 
 .adminshop{
     width: 100vw;
     height: 100vh;
 }
-
-@import "./workbench.css";
-@import "./widget.css";
